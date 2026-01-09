@@ -68,13 +68,30 @@
         </div>
     </nav>
 
-    <!-- Floating Home Button (mobile friendly) -->
+    <!-- Floating Home Button (mobile friendly)
     <a href="index.html"
        class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/20 hover:scale-105 transition"
        aria-label="Volver al inicio">
         ⌂
-    </a>
+    </a> -->
+<!-- Mobile bottom bar -->
+<div class="md:hidden fixed bottom-4 left-0 right-0 z-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="bg-white border border-slate-200 shadow-xl rounded-3xl p-2 flex items-center justify-between gap-2">
+      <a id="btnPrevBottom" class="flex-1 text-center px-3 py-3 rounded-2xl bg-slate-900 text-white font-bold text-sm">
+        ←
+      </a>
 
+      <a href="index.html" class="flex-[1.6] text-center px-3 py-3 rounded-2xl bg-slate-50 border border-slate-200 font-bold text-sm text-slate-900">
+        Inicio
+      </a>
+
+      <a id="btnNextBottom" class="flex-1 text-center px-3 py-3 rounded-2xl bg-slate-900 text-white font-bold text-sm">
+        →
+      </a>
+    </div>
+  </div>
+</div>
 
     <div class="max-w-5xl mx-auto">
         <!-- Header -->
