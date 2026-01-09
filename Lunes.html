@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunes: Arquitectura Robin - Espalda & Tríceps</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #fdfbf7;
+            color: #3d405b;
+        }
+
+        .glass-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(61, 64, 91, 0.05);
+            border: 1px solid #f1f1f1;
+        }
+
+        .bg-sage { background-color: #81b29a; }
+        .text-sage { color: #81b29a; }
+        .bg-navy { background-color: #3d405b; }
+        .bg-robin { background-color: #0ea5e9; }
+        
+        .step-number {
+            @apply w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm shrink-0;
+        }
+
+        .badge-tech {
+            @apply px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-500 mb-2 inline-block;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Top Nav -->
+    <nav class="sticky top-4 z-50 mb-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="backdrop-blur-xl bg-white/80 border border-slate-200/70 shadow-sm rounded-2xl px-4 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 font-extrabold tracking-tight text-slate-800" aria-label="Regresar al inicio">
+                    <span class="inline-flex w-9 h-9 rounded-xl bg-slate-900 text-white items-center justify-center">⌂</span>
+                    <span class="hidden sm:inline">RobinOS</span>
+                    <span class="hidden md:inline text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em]">Centro de Mando</span>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-1 text-[11px] font-bold text-slate-600">
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Lunes.html">Lun</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Martes.html">Mar</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Miercoles.html">Mié</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Jueves.html">Jue</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Viernes.html">Vie</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Sabado.html">Sáb</a>
+                    <span class="mx-1 w-px h-6 bg-slate-200"></span>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Agilidad.html">Agilidad</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Mandibula.html">Mandíbula</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Suplementos.html">Suplementos</a>
+                </div>
+
+                <a href="index.html" class="lg:hidden px-3 py-2 rounded-xl bg-slate-900 text-white text-[11px] font-bold shadow-sm" aria-label="Inicio">
+                    Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Home Button (mobile friendly) -->
+    <a href="index.html"
+       class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/20 hover:scale-105 transition"
+       aria-label="Volver al inicio">
+        ⌂
+    </a>
+
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Lunes: <span class="text-robin-500 text-sky-600">Arquitectura Robin</span></h1>
+            <p class="text-slate-500 font-medium uppercase tracking-widest text-xs mt-2 italic">Foco: Postura, Espalda en V y Firmeza de Tríceps</p>
+        </header>
+
+        <!-- Section 1: Warmup & Agility Calibrator -->
+        <section class="mb-12">
+            <div class="flex items-center gap-2 mb-8">
+                <span class="text-3xl">⚙️</span>
+                <h2 class="text-2xl font-bold text-slate-800">Fase 1: Calibración de Sistema</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 border-l-8 border-sky-500">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800 italic">Calentamiento en Caminadora</h3>
+                    <p class="text-sm text-slate-600 mb-4"><strong>V: 3.1 mph | 10 min | Inc: 0.5</strong></p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Camina de forma consciente. Mueve los brazos rítmicamente. Aprovecha para practicar la <strong>Respiración Abdominal</strong> (inflar el globo).</p>
+                </div>
+                <div class="glass-card p-6 border-l-8 border-purple-500">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800 italic">Control de Chakra (Agilidad)</h3>
+                    <p class="text-sm text-slate-600 mb-4"><strong>2 min de Patrones Cruzados</strong></p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Toca rodilla derecha con mano izquierda y viceversa. Hazlo rápido. Esto "enciende" tu coordinación para no sentirte torpe durante las pesas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Strength Circuit -->
+        <section class="mb-16">
+            <div class="flex items-center gap-2 mb-8">
+                <span class="text-3xl">🏋️‍♀️</span>
+                <h2 class="text-2xl font-bold text-slate-800">Circuito de Fuerza (4 Series x 15 Reps)</h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Exercise 1 -->
+                <div class="glass-card p-6 md:p-8 border-l-8 border-sky-600">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="step-number">1</div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Remo Inclinado (El Constructor de V)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                                <div>
+                                    <span class="badge-tech">Técnica Correcta</span>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Torso inclinado 45°, espalda plana como una tabla.</li>
+                                        <li>Jala las pesas de 8lb hacia tus <strong>bolsillos</strong>.</li>
+                                        <li>Junta las escápulas (alitas) al final del movimiento.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-sky-50 p-4 rounded-xl border border-sky-100">
+                                    <p class="font-bold text-sky-700 mb-1 italic">Anti-Torpeza:</p>
+                                    <p class="text-xs">No uses el impulso de la espalda para subir el peso. Si tu torso se balancea, el ejercicio pierde eficacia. Mantente estática como una estatua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 2 -->
+                <div class="glass-card p-6 md:p-8 border-l-8 border-navy">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="step-number">2</div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Pájaros (Vuelos Posteriores)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                                <div>
+                                    <span class="badge-tech">Técnica Correcta</span>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Misma postura que el remo pero abre los brazos hacia los lados.</li>
+                                        <li>Codos ligeramente flexionados (como si abrazaras un barril).</li>
+                                        <li>Sube solo hasta que tus brazos estén paralelos al suelo.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-slate-100 p-4 rounded-xl border border-slate-200">
+                                    <p class="font-bold text-navy mb-1 italic">Look Robin:</p>
+                                    <p class="text-xs">Este ejercicio define la parte trasera de tus hombros, lo que hace que tu cuello se vea más largo y tu rostro más angulado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 3 -->
+                <div class="glass-card p-6 md:p-8 border-l-8 border-sage">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="step-number">3</div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Copa de Tríceps (A un brazo)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                                <div>
+                                    <span class="badge-tech">Técnica Correcta</span>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Pesas de 8lb arriba de tu cabeza.</li>
+                                        <li>Baja la pesa detrás de tu nuca doblando el codo.</li>
+                                        <li>Mantén el codo <strong>pegado a tu oreja</strong>; no dejes que se abra.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-sage/10 p-4 rounded-xl border border-sage/20">
+                                    <p class="font-bold text-sage mb-1 italic">Señal de Error:</p>
+                                    <p class="text-xs">Si sientes dolor en el codo, estás bajando demasiado rápido. Controla el peso. Imagina que el tríceps se estira como una liga.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exercise 4 -->
+                <div class="glass-card p-6 md:p-8 border-l-8 border-amber-500">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="step-number">4</div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Fondos en Silla (Dips)</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                                <div>
+                                    <span class="badge-tech">Técnica Correcta</span>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Manos al borde de una silla.</li>
+                                        <li>Baja la cadera pegada a la silla.</li>
+                                        <li>Codos apuntando hacia ATRÁS, no hacia afuera.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-amber-50 p-4 rounded-xl border border-amber-200">
+                                    <p class="font-bold text-amber-700 mb-1 italic">Conexión Muñeca:</p>
+                                    <p class="text-xs">Si te duelen las muñecas, asegúrate de que tus palmas estén bien apoyadas y no dobles de más. Mantén la tensión en el brazo, no en la articulación.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Cardio Module -->
+        <section class="mb-16">
+            <div class="glass-card p-8 bg-navy text-white border-none shadow-2xl overflow-hidden relative">
+                <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-sky-400 mb-4 uppercase tracking-widest italic">Cardio: Bicicleta</h3>
+                        <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                            Cerramos con bicicleta para movilizar el metabolismo sin impactar las rodillas después de la caminata inicial. 
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div class="p-4 bg-white/10 rounded-2xl border border-white/20 text-center flex-grow">
+                                <p class="text-[10px] font-bold text-sky-300 uppercase">Resistencia</p>
+                                <p class="text-3xl font-bold">6 - 7</p>
+                            </div>
+                            <div class="p-4 bg-white/10 rounded-2xl border border-white/20 text-center flex-grow">
+                                <p class="text-[10px] font-bold text-sky-300 uppercase">Tiempo</p>
+                                <p class="text-3xl font-bold">15'</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 bg-white/5 p-6 rounded-3xl border border-white/10">
+                        <h4 class="text-xs font-bold text-sky-400 mb-2 uppercase">Protocolo de Manos (Anti-T-Rex):</h4>
+                        <p class="text-[11px] text-slate-400 leading-relaxed">
+                            Mientras pedaleas, haz el ejercicio de <strong>Oposición de Dedos</strong> y <strong>Ondas de Muñeca</strong>. Aprovecha este tiempo para recalibrar la sensibilidad de tus manos. No te quedes agarrando el manubrio con fuerza excesiva.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Post-Workout Recovery -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 border-t-8 border-purple-400">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2"><span>👐</span> Reset de Muñecas</h3>
+                    <p class="text-xs text-slate-500 mb-4">Haz esto inmediatamente después de terminar las pesas:</p>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <span class="text-xl">1.</span>
+                            <p class="text-[11px] font-bold italic">El Mesero (2 reps x 5s por lado): Limpia la señal de los nervios que comprimas al dormir.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="text-xl">2.</span>
+                            <p class="text-[11px] font-bold italic">La Garra de Tigre: Estira la fascia de la palma para quitar el entumecimiento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 border-t-8 border-emerald-400 bg-emerald-50">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2"><span>🥤</span> Licuado Ninja 3.0</h3>
+                    <p class="text-sm text-emerald-700 leading-relaxed">
+                        Tus tríceps y espalda necesitan los aminoácidos de la <strong>SciFit Whey</strong> hoy mismo. Agrega el colágeno para proteger tus hombros del volumen de pesas.
+                    </p>
+                    <div class="mt-4 p-3 bg-white rounded-xl text-[10px] font-bold text-emerald-600 uppercase border border-emerald-200">
+                        Mañana Martes: Intervalos de Carrera
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-10 text-slate-400 text-xs italic">
+            "Empieza el lunes reprogramando tu cuerpo. Dattebayo."
+        </footer>
+    </div>
+
+</body>
+</html>

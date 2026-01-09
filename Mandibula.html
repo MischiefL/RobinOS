@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo de Alivio Mandibular: Adiós al Bruxismo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #fdfbf7;
+            color: #3d405b;
+        }
+
+        .card-face {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid #f1eeeb;
+            transition: all 0.3s ease;
+        }
+
+        .card-face:hover {
+            border-color: #81b29a;
+            transform: translateY(-2px);
+        }
+
+        .bg-sage-light { background-color: #f0f7f4; }
+        .text-sage { color: #81b29a; }
+        .bg-terracotta { background-color: #e07a5f; }
+        
+        .badge-facial {
+            @apply px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-emerald-50 text-emerald-600 mb-2 inline-block;
+        }
+        .badge-adaptogen {
+            @apply px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-purple-50 text-purple-600 mb-2 inline-block;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 text-balance">
+
+    <!-- Top Nav -->
+    <nav class="sticky top-4 z-50 mb-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="backdrop-blur-xl bg-white/80 border border-slate-200/70 shadow-sm rounded-2xl px-4 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 font-extrabold tracking-tight text-slate-800" aria-label="Regresar al inicio">
+                    <span class="inline-flex w-9 h-9 rounded-xl bg-slate-900 text-white items-center justify-center">⌂</span>
+                    <span class="hidden sm:inline">RobinOS</span>
+                    <span class="hidden md:inline text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em]">Centro de Mando</span>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-1 text-[11px] font-bold text-slate-600">
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Lunes.html">Lun</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Martes.html">Mar</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Miercoles.html">Mié</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Jueves.html">Jue</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Viernes.html">Vie</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Sabado.html">Sáb</a>
+                    <span class="mx-1 w-px h-6 bg-slate-200"></span>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Agilidad.html">Agilidad</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Mandibula.html">Mandíbula</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Suplementos.html">Suplementos</a>
+                </div>
+
+                <a href="index.html" class="lg:hidden px-3 py-2 rounded-xl bg-slate-900 text-white text-[11px] font-bold shadow-sm" aria-label="Inicio">
+                    Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Home Button (mobile friendly) -->
+    <a href="index.html"
+       class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/20 hover:scale-105 transition"
+       aria-label="Volver al inicio">
+        ⌂
+    </a>
+
+
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">Alivio <span class="text-sage">Mandibular</span></h1>
+            <p class="text-slate-500 font-medium uppercase tracking-widest text-xs mt-2 italic">Protocolo Anti-Bruxismo y Perfilado Facial</p>
+        </header>
+
+        <!-- The "Bug" Analysis -->
+        <section class="mb-12">
+            <div class="card-face p-6 md:p-8 bg-slate-900 text-white border-none shadow-xl">
+                <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    🦷 El Problema: Hipertensión del Masetero
+                </h2>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Apretar la mandíbula (bruxismo) no solo daña tus dientes; mantiene tus músculos faciales en un estado de "lucha o huida". Esto bloquea el drenaje linfático y hace que el rostro se vea inflamado. Relajar esta zona es el 50% del éxito para tu <strong>perfilado facial</strong>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key Exercises -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-2">
+                <span>🧘‍♀️</span> Rutina de Descompresión (3 min)
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- The "N" Position -->
+                <div class="card-face p-6">
+                    <span class="badge-facial">Hábito Diario</span>
+                    <h3 class="text-lg font-bold mb-3 text-slate-800">La Posición de la "N"</h3>
+                    <div class="text-xs text-slate-600 space-y-3">
+                        <p><strong>Ejecución:</strong> Di la letra "N" en voz alta. Nota dónde queda tu lengua. Esa es la posición de reposo: la punta de la lengua en el paladar, justo detrás de los dientes (sin tocarlos).</p>
+                        <p><strong>El "Hack":</strong> Mantén los labios cerrados pero los **dientes separados**. Si tus dientes se tocan durante el día, estás gastando energía y dañando tus encías.</p>
+                    </div>
+                </div>
+
+                <!-- Masseter Release -->
+                <div class="card-face p-6">
+                    <span class="badge-facial">Masaje Profundo</span>
+                    <h3 class="text-lg font-bold mb-3 text-slate-800">Liberación del Masetero</h3>
+                    <div class="text-xs text-slate-600 space-y-3">
+                        <p><strong>Ejecución:</strong> Ubica el músculo donde se une la mandíbula (muerde fuerte para sentirlo). Con los nudillos, haz círculos lentos hacia abajo mientras abres ligeramente la boca.</p>
+                        <p><strong>El "Hack":</strong> Haz esto bajo el agua caliente de la ducha. Ayuda a que la fascia se relaje y drene los líquidos que causan la "cara hinchada".</p>
+                    </div>
+                </div>
+
+                <!-- Temporal Sweep -->
+                <div class="card-face p-6">
+                    <span class="badge-facial">Adiós Dolor de Cabeza</span>
+                    <h3 class="text-lg font-bold mb-3 text-slate-800">Barrido Temporal</h3>
+                    <div class="text-xs text-slate-600 space-y-3">
+                        <p><strong>Ejecución:</strong> Pon tus dedos en las sienes. Abre la boca grande y haz un barrido con presión hacia arriba, hacia el cuero cabelludo.</p>
+                        <p><strong>El "Hack":</strong> Alivia la presión que causa los dolores de cabeza tensionales. Es como un "reset" para tu procesador central antes de dormir.</p>
+                    </div>
+                </div>
+
+                <!-- Tongue Stretch -->
+                <div class="card-face p-6">
+                    <span class="badge-facial">Control de Lengua</span>
+                    <h3 class="text-lg font-bold mb-3">Estiramiento de Lengua</h3>
+                    <div class="text-xs text-slate-600 space-y-3">
+                        <p><strong>Ejecución:</strong> Saca la lengua lo más que puedas apuntando hacia tu barbilla. Mantén 5 segundos. Luego intenta tocar tu nariz.</p>
+                        <p><strong>El "Hack":</strong> Esto cansa los músculos que usas para apretar la boca, obligándolos a relajarse por agotamiento técnico. Evita que te muerdas al dormir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Adaptogens Section -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-2">
+                <span>🌿</span> Suplementación Estratégica
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-balance">
+                <!-- Ashwagandha -->
+                <div class="card-face p-5 border-t-4 border-purple-400">
+                    <span class="badge-adaptogen">Anti-Cortisol</span>
+                    <h4 class="font-bold text-sm mb-2 text-slate-800">Ashwagandha (KSM-66)</h4>
+                    <p class="text-[10px] text-slate-500 leading-relaxed">
+                        Reduce el cortisol (hormona del estrés) que dispara el bruxismo. Ayuda al TDAH a bajar el ruido mental.
+                        <br><br>
+                        <strong>Dosis:</strong> 300-600mg antes de dormir.
+                    </p>
+                </div>
+                <!-- Magnesium -->
+                <div class="card-face p-5 border-t-4 border-emerald-400">
+                    <span class="badge-facial">Relajante</span>
+                    <h4 class="font-bold text-sm mb-2 text-slate-800">Magnesio (Glicinato)</h4>
+                    <p class="text-[10px] text-slate-500 leading-relaxed">
+                        Relaja los músculos maseteros y ayuda a que los muslos se recuperen de la caminadora. No causa diarrea.
+                        <br><br>
+                        <strong>Dosis:</strong> 300-400mg antes de dormir.
+                    </p>
+                </div>
+                <!-- Omega 3 -->
+                <div class="card-face p-5 border-t-4 border-blue-400">
+                    <span class="badge-facial">Anti-Inflamatorio</span>
+                    <h4 class="font-bold text-sm mb-2 text-slate-800">Omega-3 (EPA/DHA)</h4>
+                    <p class="text-[10px] text-slate-500 leading-relaxed">
+                        Modula la respuesta inflamatoria de las encías y apoya la lubricación de las articulaciones.
+                        <br><br>
+                        <strong>Dosis:</strong> 1g-2g con el desayuno.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Integration Chart -->
+        <section class="mb-12">
+            <div class="bg-sage-light rounded-3xl p-8 border-2 border-sage/20">
+                <h3 class="text-xl font-bold mb-6 text-center text-slate-800">Sinergia: Mandíbula y Postura</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="chart-container">
+                        <canvas id="jawChart"></canvas>
+                    </div>
+                    <div class="space-y-4 text-sm text-slate-600">
+                        <p>Apretar la mandíbula está conectado directamente con tus "brazos de T-Rex" y tu postura de cuello:</p>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>Conexión Cuello:</strong> Si aprietas la boca, los músculos del cuello se tensan, saboteando tu perfilado.</li>
+                            <li><strong>Hormonas de Estrés:</strong> El bruxismo mantiene el cortisol alto. Relajar la boca ayuda a que la grasa abdominal (tu zona difícil) se movilice mejor.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Night Routine Hook -->
+        <footer class="bg-terracotta text-white rounded-3xl p-8 md:p-12 mb-12 shadow-2xl text-center">
+            <h3 class="text-2xl font-bold mb-4 italic">"Labios juntos, Dientes separados, Mente tranquila."</h3>
+            <p class="text-sm text-white/90 leading-relaxed mb-6">
+                Haz la <strong>Posición de la N</strong> justo antes de cerrar los ojos. Si te despiertas y sientes los dientes "apretados", repite el masaje de masetero inmediatamente.
+            </p>
+            <div class="inline-block px-4 py-2 bg-white/20 rounded-full text-xs font-bold uppercase tracking-widest border border-white/30">
+                System Status: Relajando Mandíbula...
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('jawChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Drenaje Facial', 'Calidad de Sueño', 'Menos Dolor Cabeza', 'Perfilado Mandibular'],
+                datasets: [{
+                    label: 'Impacto de la Relajación',
+                    data: [10, 8, 9, 10],
+                    backgroundColor: ['#81b29a', '#3d405b', '#e07a5f', '#f2cc8f'],
+                    borderRadius: 10
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { beginAtZero: true, max: 12, display: false },
+                    x: { grid: { display: false }, ticks: { font: { weight: 'bold', size: 10 } } }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martes: Poder en Piernas - Fuerza & Intervalos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #fdfbf7;
+            color: #3d405b;
+        }
+
+        .glass-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(61, 64, 91, 0.05);
+            border: 1px solid #f1f1f1;
+        }
+
+        .bg-sage { background-color: #81b29a; }
+        .text-sage { color: #81b29a; }
+        .bg-navy { background-color: #3d405b; }
+        .bg-fire { background-color: #e07a5f; }
+        
+        .step-number {
+            @apply w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center font-bold text-sm shrink-0;
+        }
+
+        .badge-tech {
+            @apply px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-500 mb-2 inline-block;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            height: 250px;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Top Nav -->
+    <nav class="sticky top-4 z-50 mb-8">
+        <div class="max-w-5xl mx-auto">
+            <div class="backdrop-blur-xl bg-white/80 border border-slate-200/70 shadow-sm rounded-2xl px-4 py-3 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2 font-extrabold tracking-tight text-slate-800" aria-label="Regresar al inicio">
+                    <span class="inline-flex w-9 h-9 rounded-xl bg-slate-900 text-white items-center justify-center">⌂</span>
+                    <span class="hidden sm:inline">RobinOS</span>
+                    <span class="hidden md:inline text-slate-400 font-bold text-[10px] uppercase tracking-[0.2em]">Centro de Mando</span>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-1 text-[11px] font-bold text-slate-600">
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Lunes.html">Lun</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Martes.html">Mar</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Miercoles.html">Mié</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Jueves.html">Jue</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Viernes.html">Vie</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Sabado.html">Sáb</a>
+                    <span class="mx-1 w-px h-6 bg-slate-200"></span>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Agilidad.html">Agilidad</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Mandibula.html">Mandíbula</a>
+                    <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="Suplementos.html">Suplementos</a>
+                </div>
+
+                <a href="index.html" class="lg:hidden px-3 py-2 rounded-xl bg-slate-900 text-white text-[11px] font-bold shadow-sm" aria-label="Inicio">
+                    Inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Home Button (mobile friendly) -->
+    <a href="index.html"
+       class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-2xl bg-slate-900 text-white flex items-center justify-center shadow-lg shadow-slate-900/20 hover:scale-105 transition"
+       aria-label="Volver al inicio">
+        ⌂
+    </a>
+
+
+    <div class="max-w-5xl mx-auto">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight text-balance">Martes: <span class="text-fire-600 text-orange-600">Poder en Piernas</span></h1>
+            <p class="text-slate-500 font-medium uppercase tracking-widest text-xs mt-2 italic">Foco: Resistencia 10K, Potencia de Glúteo y Quema Metabólica</p>
+        </header>
+
+        <!-- Section 1: Mobility & Reflex Calibration -->
+        <section class="mb-12">
+            <div class="flex items-center gap-2 mb-8">
+                <span class="text-3xl">⚙️</span>
+                <h2 class="text-2xl font-bold text-slate-800">Fase 1: Calibración de Rodillas y Agilidad</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 border-l-8 border-orange-500">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800 italic">Calentamiento Caminadora</h3>
+                    <p class="text-sm text-slate-600 mb-4"><strong>V: 3.0 mph | 5 min | Inc: 0.0</strong></p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Paso suave. Enfócate en el apoyo del pie (talón-punta). Prepara a tus tobillos para el impacto de los intervalos.</p>
+                </div>
+                <div class="glass-card p-6 border-l-8 border-indigo-500">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800 italic">Control de Chakra: La Garza</h3>
+                    <p class="text-sm text-slate-600 mb-4"><strong>1 min por pierna</strong></p>
+                    <p class="text-xs text-slate-500 leading-relaxed">Mantén el equilibrio en un pie. Si es fácil, intenta girar la cabeza de lado a lado. Esto quita la "torpeza" al despertar los nervios estabilizadores.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Lower Body Strength -->
+        <section class="mb-16">
+            <div class="flex items-center gap-2 mb-8">
+                <span class="text-3xl">🏋️‍♀️</span>
+                <h2 class="text-2xl font-bold text-slate-800">Circuito de Fuerza (3 Series)</h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Squats -->
+                <div class="glass-card p-6 md:p-8 border-l-8 border-orange-600">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="step-number">1</div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Sentadillas (Air Squats) - 20 Reps</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                                <div>
+                                    <span class="badge-tech">Técnica Correcta</span>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Pies a lo ancho de hombros.</li>
+                                        <li>Baja la cadera como si buscaras una silla lejana.</li>
+                                        <li>Mantén el peso en los <strong>talones</strong> (no dejes que se levanten).</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-orange-50 p-4 rounded-xl border border-orange-100">
+                                    <p class="font-bold text-orange-700 mb-1 italic">Evita este error:</p>
+                                    <p class="text-xs">No dejes que tus rodillas colapsen hacia adentro. Empújalas hacia afuera mientras bajas para proteger tus ligamentos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunges -->
+                <div class="glass-card p-6 md:p-8 border-l-8 border-navy">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="step-number">2</div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Desplantes Alternados - 12 Reps/Pierna</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                                <div>
+                                    <span class="badge-tech">Técnica Correcta</span>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Da un paso grande hacia adelante.</li>
+                                        <li>Baja la rodilla de atrás buscando el suelo (sin golpearlo).</li>
+                                        <li>Ambas rodillas deben formar un ángulo de 90°.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-slate-100 p-4 rounded-xl border border-slate-200">
+                                    <p class="font-bold text-navy mb-1 italic">Control de Chakra:</p>
+                                    <p class="text-xs">Si te tambaleas, abre un poco más el ancho de tus pies (como si estuvieras en rieles de tren, no en una cuerda floja).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glute Bridges -->
+                <div class="glass-card p-6 md:p-8 border-l-8 border-sage">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="step-number">3</div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-bold text-slate-800 mb-2">Puentes de Glúteo - 20 Reps</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-600">
+                                <div>
+                                    <span class="badge-tech">Técnica Correcta</span>
+                                    <ul class="list-disc pl-4 space-y-1">
+                                        <li>Acostada bocarriba, pies cerca de tus glúteos.</li>
+                                        <li>Eleva la cadera apretando las pompas con fuerza.</li>
+                                        <li>Sostén 1 segundo arriba y baja lento.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-sage/10 p-4 rounded-xl border border-sage/20">
+                                    <p class="font-bold text-sage mb-1 italic">Anti-Bruxismo:</p>
+                                    <p class="text-xs">Relaja el cuello y la mandíbula mientras subes. Toda la fuerza debe nacer en el glúteo, no en la cara.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: High Intensity Intervals (The 10K Engine) -->
+        <section class="mb-16">
+            <div class="glass-card p-8 bg-slate-900 text-white border-none shadow-2xl relative overflow-hidden">
+                <div class="relative z-10">
+                    <h3 class="text-2xl font-bold text-orange-400 mb-6 uppercase tracking-widest italic">Desafío: Intervalos de Carrera</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-8">
+                        Este es el bloque que "reprograma" tu capacidad pulmonar para octubre. No te detengas, solo ajusta la velocidad según el cronómetro.
+                    </p>
+                    
+                    <div class="chart-container mb-8">
+                        <canvas id="intervalChart"></canvas>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-white/10 rounded-3xl border border-white/20">
+                            <h4 class="text-xs font-bold text-orange-400 mb-2 uppercase">Bloque de Acción:</h4>
+                            <ul class="text-xs space-y-2 text-slate-300">
+                                <li><strong>RUN:</strong> 2 min a 5.5 mph (Paso de Velocidad)</li>
+                                <li><strong>WALK:</strong> 1 min a 3.0 mph (Recuperación)</li>
+                                <li class="text-orange-300 font-bold">REPETIR 8 VECES</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-white/10 rounded-3xl border border-white/20">
+                            <h4 class="text-xs font-bold text-sky-400 mb-2 uppercase">Técnica Ninja (Respiración):</h4>
+                            <p class="text-[11px] text-slate-400 leading-relaxed">
+                                Usa la <strong>Técnica 2:2</strong> (Inhala en 2 pasos, exhala en 2 pasos). Si sientes que te falta aire, exhala fuerte por la boca como si soplaras una vela.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Post-Workout Recovery -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 border-t-8 border-blue-400">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2"><span>🌬️</span> Calma Mandibular</h3>
+                    <p class="text-xs text-slate-500 mb-4 italic">Al terminar los intervalos, la mandíbula suele tensarse por el esfuerzo:</p>
+                    <ul class="text-xs space-y-3">
+                        <li class="flex gap-2">✅ <strong>Posición de N:</strong> Lengua al paladar, dientes separados.</li>
+                        <li class="flex gap-2">✅ <strong>Masaje Masetero:</strong> 1 min con nudillos para soltar la cara.</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-8 border-t-8 border-emerald-400 bg-emerald-50 text-balance">
+                    <h3 class="text-xl font-bold text-emerald-800 mb-4 flex items-center gap-2"><span>🥤</span> Licuado Ninja 3.0</h3>
+                    <p class="text-sm text-emerald-700 leading-relaxed">
+                        Tus piernas acaban de hacer el trabajo más duro de la semana. Agrega <strong>colágeno extra</strong> hoy para proteger los meniscos del impacto de las 5.5 mph.
+                    </p>
+                    <div class="mt-4 p-3 bg-white rounded-xl text-[10px] font-bold text-emerald-600 uppercase border border-emerald-200">
+                        Mañana Miércoles: Power Walk (Inclinación 7)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center py-10 text-slate-400 text-xs italic">
+            "El esfuerzo de hoy es la ligereza de octubre. Dattebayo."
+        </footer>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('intervalChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Inicio', '2m (RUN)', '3m (WALK)', '5m (RUN)', '6m (WALK)', '8m (RUN)', '9m (WALK)', '11m (RUN)', '12m (WALK)'],
+                datasets: [{
+                    label: 'Velocidad mph',
+                    data: [3.0, 5.5, 3.0, 5.5, 3.0, 5.5, 3.0, 5.5, 3.0],
+                    borderColor: '#fb923c',
+                    backgroundColor: 'rgba(251, 146, 60, 0.1)',
+                    fill: true,
+                    stepped: true,
+                    borderWidth: 3,
+                    pointRadius: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { min: 2, max: 7, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+                    x: { grid: { display: false }, ticks: { display: false } }
+                },
+                plugins: {
+                    legend: { display: false }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

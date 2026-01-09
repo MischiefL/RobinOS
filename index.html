@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robin OS | Centro de Mando</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: #3b82f6;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+        }
+
+        .active-day {
+            border: 2px solid #3b82f6 !important;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(30, 41, 59, 0.7) 100%) !important;
+        }
+
+        .active-badge {
+            display: inline-flex;
+            background: #3b82f6;
+            color: white;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 99px;
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-10">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Main Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+            <div class="text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-3 mb-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20">
+                        <i class="fas fa-terminal text-white"></i>
+                    </div>
+                    <h1 class="text-3xl font-extrabold tracking-tighter uppercase italic">Robin<span class="text-blue-500">OS</span></h1>
+                </div>
+                <p class="text-slate-400 text-sm font-medium">Hardware Optimization Protocol v2.5</p>
+            </div>
+            
+            <div class="glass-card px-6 py-3 rounded-2xl flex items-center gap-6">
+                <div class="text-center">
+                    <p class="text-[10px] text-slate-500 font-bold uppercase">Status</p>
+                    <p class="text-xs font-bold text-emerald-400">Online</p>
+                </div>
+                <div class="w-px h-8 bg-slate-700"></div>
+                <div class="text-center">
+                    <p class="text-[10px] text-slate-500 font-bold uppercase">Goal</p>
+                    <p class="text-xs font-bold text-blue-400 italic">10K OCT</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Weekly Training Grid -->
+        <section class="mb-16">
+            <h2 class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+                <i class="fas fa-calendar-alt text-blue-500"></i> Ciclo de Entrenamiento
+            </h2>
+            <div class="nav-grid" id="weekly-grid">
+                <!-- Lunes -->
+                <a href="Lunes.html" id="day-1" class="glass-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-all">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-200">Lunes</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Espalda & Tríceps</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-sky-500"></i>
+                </a>
+
+                <!-- Martes -->
+                <a href="Martes.html" id="day-2" class="glass-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-orange-400 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-200">Martes</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Piernas & Intervalos</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-orange-500"></i>
+                </a>
+
+                <!-- Miercoles -->
+                <a href="Miercoles.html" id="day-3" class="glass-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-all">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-200">Miércoles</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Power Walk & Core</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-emerald-500"></i>
+                </a>
+
+                <!-- Jueves -->
+                <a href="Jueves.html" id="day-4" class="glass-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
+                            <i class="fas fa-user-ninja"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-200">Jueves</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Brazos & Postura</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-indigo-500"></i>
+                </a>
+
+                <!-- Viernes -->
+                <a href="Viernes.html" id="day-5" class="glass-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-rose-400 group-hover:bg-rose-500 group-hover:text-white transition-all">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-200">Viernes</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Full Body Circuit</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-rose-500"></i>
+                </a>
+
+                <!-- Sabado -->
+                <a href="Sabado.html" id="day-6" class="glass-card p-6 rounded-3xl flex items-center justify-between group">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-blue-400 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-200">Sábado</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Carrera Larga (LSR)</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-slate-700 group-hover:text-blue-600"></i>
+                </a>
+
+                <!-- Domingo -->
+                <div id="day-0" class="glass-card p-6 rounded-3xl flex items-center justify-between group cursor-default">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-slate-400">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-200">Domingo</h3>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wider">Mantenimiento & Rest</p>
+                        </div>
+                    </div>
+                    <span class="text-[8px] bg-slate-800 px-2 py-1 rounded text-slate-500 font-bold uppercase">Sleep Mode</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Protocols & Biohacking -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+                    <i class="fas fa-microchip text-blue-500"></i> Protocolos de Control
+                </h2>
+                <div class="space-y-4">
+                    <a href="Agilidad.html" class="glass-card p-5 rounded-2xl flex items-center gap-4 group">
+                        <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xs font-bold text-slate-200">Agilidad & TDAH</h4>
+                            <p class="text-[10px] text-slate-500 italic">Ejercicios de propriocepción y control.</p>
+                        </div>
+                    </a>
+                    <a href="Mandibula.html" class="glass-card p-5 rounded-2xl flex items-center gap-4 group">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                            <i class="fas fa-tooth"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xs font-bold text-slate-200">Mandíbula & Perfilado</h4>
+                            <p class="text-[10px] text-slate-500 italic">Adiós al bruxismo y tensión facial.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-xs font-bold text-slate-500 uppercase tracking-[0.2em] mb-6 flex items-center gap-3">
+                    <i class="fas fa-flask text-blue-500"></i> Optimización Química
+                </h2>
+                <div class="space-y-4">
+                    <a href="Suplementos.html" class="glass-card p-5 rounded-2xl flex items-center gap-4 group">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xs font-bold text-slate-200">Plan de Suplementos</h4>
+                            <p class="text-[10px] text-slate-500 italic">Cronograma de vitaminas y adaptógenos.</p>
+                        </div>
+                    </a>
+                    <div class="glass-card p-5 rounded-2xl flex items-center gap-4 opacity-60">
+                        <div class="w-10 h-10 rounded-xl bg-slate-500/10 text-slate-400 flex items-center justify-center">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-xs font-bold text-slate-200">Análisis de Progreso</h4>
+                            <p class="text-[10px] text-slate-500 italic">Próximamente: Conexión con datos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 text-center border-t border-slate-800 pt-10 pb-10">
+            <p class="text-[9px] text-slate-600 font-bold uppercase tracking-[0.3em]">
+                Robin Architecture • Built for 10K Endurance • Dattebayo
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Lógica para detectar el día actual y resaltarlo
+        const now = new Date();
+        const dayOfWeek = now.getDay(); // 0 (Dom) a 6 (Sab)
+        
+        const currentDayElement = document.getElementById(`day-${dayOfWeek}`);
+        if (currentDayElement) {
+            currentDayElement.classList.add('active-day');
+            
+            // Agregar el badge de "Hoy"
+            const titleDiv = currentDayElement.querySelector('h3');
+            const badge = document.createElement('span');
+            badge.className = 'active-badge';
+            badge.innerText = 'Hoy';
+            titleDiv.appendChild(badge);
+        }
+    </script>
+</body>
+</html>
